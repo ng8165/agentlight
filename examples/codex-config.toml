@@ -1,0 +1,11 @@
+# Copy the notify entry into ~/.codex/config.toml after confirming the syntax
+# accepted by the Codex CLI version installed on this Mac.
+#
+# Codex CLI notification payloads and config syntax are version-sensitive.
+# AgentLight's adapter accepts agent-turn-complete and approval-requested when
+# the installed CLI emits those event names.
+notify = ["/absolute/path/to/agentlight/scripts/agent-status-codex-hook.sh", "agent-turn-complete"]
+
+# If your CLI exposes the experimental hook system, enable it and point the
+# matching events at the same adapter. Keep this commented until verified.
+# codex_hooks = true
